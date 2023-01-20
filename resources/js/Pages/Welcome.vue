@@ -20,7 +20,7 @@ defineProps({
                 v-if="$page.props.auth.user"
                 :href="route('dashboard')"
                 class="text-sm text-gray-700 dark:text-gray-500 underline"
-                >Dashboard</Link
+                >Pokemon List</Link
             >
 
             <template v-else>
