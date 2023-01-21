@@ -1,3 +1,7 @@
 *
 !public/
 !.gitignore
+!images
+!images/*
+!pokemonnames.json
+!pokemons.json
