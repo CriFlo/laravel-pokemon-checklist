@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: droplet
+    runs-on: PC-HOME-MAIN
 
     strategy:
       matrix:
