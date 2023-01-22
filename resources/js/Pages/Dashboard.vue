@@ -11,7 +11,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
                 <ul class="text-center px-10 py-4 flex flex-col justify-center items-center">
                     <li
-                        class="text-gray-200 bg-red-600 m-1 p-6 rounded-[40px] min-w-[200px]"
+                        class="text-gray-200 bg-red-600 m-1 p-6 rounded-[40px] min-w-[200px] cursor-pointer"
                         v-for="generation in generations"
                         @click="chooseGeneration(generation)"
                     >

@@ -1,6 +1,6 @@
 <template>
     <div @click="changeState"
-        :class="'max-w-sm rounded overflow-hidden shadow-lg rounded-[40px] px-2 pt-2 flex flex-wrap flex-col justify-center ' + (catched ? 'border-4 border-green-600' : 'border-4 border-red-600')"
+        :class="'max-w-sm rounded overflow-hidden shadow-lg rounded-[40px] px-2 pt-2 flex flex-wrap flex-col justify-center cursor-pointer ' + (catched ? 'border-4 border-green-600' : 'border-4 border-red-600')"
         style="background-color: white;">
         <img draggable="false" class="w-full" :src="link">
         <div class="py-2">
