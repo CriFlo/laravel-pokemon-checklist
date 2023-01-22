@@ -22,8 +22,8 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 relative">
             <div @click="back" id="back">
-                <div class="fixed right-6 bottom-6 p-4 bg-white rounded-[80px] cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="fixed right-6 bottom-6 p-4 bg-black rounded-[80px] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
                 </div>
