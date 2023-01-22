@@ -14,7 +14,7 @@ jobs:
     runs-on: self-hosted
     strategy:
       matrix:
-        node-version: [18.13.0]
+        node: [18.13.0]
         php: ["8.0"]
         laravel: [9]
 
@@ -24,7 +24,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: ${{ matrix.php-versions }}
+        php-version: ${{ matrix.php }}
         extensions: mbstring, dom, fileinfo, mysql
         
     - name: Install Composer dependencies
