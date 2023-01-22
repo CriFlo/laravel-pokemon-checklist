@@ -19,6 +19,7 @@ export default defineConfig({
             },
         }),
         VitePWA({
+            registerSW: true,
             useCredentials: true,
             injectRegister: 'auto',
             registerType: 'autoUpdate',
@@ -29,8 +30,7 @@ export default defineConfig({
                 name: "PokemonCheckList",
                 short_name: "PokemonCheckList",
                 description: "PokemonCheckList",
-                theme_color: '#ffffff',
-                background_color: '#ffffff',
+                theme_color: '#000000',
                 icons: [
                     {
                         src: '/storage/generic/192x192.png',
@@ -43,18 +43,14 @@ export default defineConfig({
                         type: 'image/png',
                     }
                 ],
-                start_url: '/build/',
-                scope: '/build/',
-                // display: 'standalone',
-                // lang: 'en',
             },
-            strategies: 'generateSW',
-            serviceWorker: {
-                output: 'sw.js',
-                registrationStrategy: 'registerImmediately',
-                registerType: 'autoUpdate',
-                registration: '/build/sw.js',
-            }//     'laravel-vite-plugin-manifest.css',
+            strategies: 'autoUpdate',
+            // serviceWorker: {
+            //     output: 'sw.js',
+            //     registrationStrategy: 'registerImmediately',
+            //     registerType: 'autoUpdate',
+            //     registration: '/build/sw.js',
+            // },
         }),
     ],
 });
