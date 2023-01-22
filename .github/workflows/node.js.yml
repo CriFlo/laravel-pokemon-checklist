@@ -44,4 +44,4 @@ jobs:
         remote: /var/www/laravel-pokemon-checklist/
         host: ${{secrets.PROD_IP}}
         username: root
-        password: ${{PROD_PASSWORD}}
+        password: ${{secrets.PROD_PASSWORD}}
