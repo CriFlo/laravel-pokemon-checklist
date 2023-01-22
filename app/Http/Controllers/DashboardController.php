@@ -13,7 +13,19 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         return Inertia::render('Dashboard', [
-            'pokemons' => Pokemon::all(),
+            'generations' => Pokemon::pluck('generation')->unique(),
+        ]);
+    }
+
+    public function pokemons($generation)
+    {
+        $pokemons = Pokemon::where('generation', $generation)->get();
+        $pokemons->each(function ($pokemon) {
+            $pokemon->isCaught = Auth::user()->pokemons->contains($pokemon->id);
+        });
+        return Inertia::render('Pokemons', [
+            'pokemons' => $pokemons,
+            'generation' => $generation,
         ]);
     }
 

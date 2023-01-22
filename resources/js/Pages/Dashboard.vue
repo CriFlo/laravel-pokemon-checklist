@@ -1,33 +1,41 @@
-<script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import PokemonCard from '@/Components/PokemonCard.vue';
-import { Head } from '@inertiajs/vue3';
-
-defineProps({
-    pokemons: Array,
-});
-</script>
-
 <template>
+
     <Head title="Pokemon List" />
 
     <AuthenticatedLayout>
         <!-- <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Dashboard</h2>
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Generations</h2>
         </template> -->
-        <div class="py-12">
+
+        <div class="">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
-                    <div class="p-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-5 text-center">
-                        <!-- <div v-for="pokemon in pokemons">{{ pokemon.label }}</div> -->
-                        <PokemonCard
-                            v-for="pokemon in pokemons"
-                            :key="pokemon.id"
-                            :pokemon="pokemon"
-                        />
-                    </div>
+                    <ul class="text-center px-10 py-4 flex flex-col justify-center items-center">
+                        <li
+                            class="text-gray-200 bg-red-600 m-1 p-6 rounded-[40px] min-w-[200px]"
+                            v-for="generation in generations"
+                            @click="chooseGeneration(generation)"
+                        >
+                            {{ generation }}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </AuthenticatedLayout>
 </template>
+
+<script setup>
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { Head, router } from '@inertiajs/vue3';
+
+defineProps({
+    generations: Object,
+});
+
+function chooseGeneration(generation) {
+    //push to generation page
+    router.visit(`/pokemons/${generation}`);
+}
+
+</script>

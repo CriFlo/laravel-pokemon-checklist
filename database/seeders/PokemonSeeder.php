@@ -23,8 +23,16 @@ class PokemonSeeder extends Seeder
                 $pokemon_save = new Pokemon();
                 $pokemon_save->name = $pokemon['name'];
                 $pokemon_save->label = strtolower($pokemon['label']);
+
                 $pokemon_save->save();
+                // $this->setGeneration($pokemon_save, $pokemon['id']);
+
             // }
         }
+    }
+
+    private function setGeneration($pokemon_save, $pokemon)
+    {
+
     }
 }

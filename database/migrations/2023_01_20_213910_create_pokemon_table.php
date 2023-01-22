@@ -18,6 +18,7 @@ return new class extends Migration
             // $table->integer('pokemon_id');
             $table->string('name');
             $table->string('label');
+            $table->string('generation')->nullable();
         });
 
         Schema::create('user_pokemon', function (Blueprint $table) {
