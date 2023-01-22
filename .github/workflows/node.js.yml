@@ -40,8 +40,8 @@ jobs:
     - name: Copy to prod
       uses: garygrossgarten/github-action-scp@release
       with:
-        local: public
-        remote: /var/www/laravel-pokemon-checklist/
+        local: public/build
+        remote: /var/www/test/
         host: ${{secrets.PROD_IP}}
         username: root
         password: ${{secrets.PROD_PASSWORD}}
