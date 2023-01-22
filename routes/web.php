@@ -17,6 +17,10 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/', function () {
+    return redirect()->route('dashboard');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/change-state/{id}', [DashboardController::class, 'changeState']);
