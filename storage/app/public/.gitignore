@@ -2,3 +2,5 @@
 !.gitignore
 !pokemons
 !pokemons/*
+!generic
+!generic/*
