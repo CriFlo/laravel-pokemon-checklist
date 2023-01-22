@@ -1,2 +1,4 @@
 *
 !.gitignore
+!pokemons
+!pokemons/*
